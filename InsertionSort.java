@@ -14,7 +14,7 @@ public class InsertionSort implements Sorter {
                 input[k] = temp;
             }
             //for(int x : input) System.out.print(x);
-            System.out.println();
+            //System.out.println();
         }
         //for(int i : input) System.out.println(i);
     }

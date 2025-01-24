@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args)
     {
@@ -10,8 +12,10 @@ public class Main {
         //  3. Provide random input to test suite and ensure your implementations
         //     of InsertionSort and Selection sort continue to work.
         //  4. Increase the loop count for TestSuite to get better performance results.
-
-        int[] testInput = { 1, 2, 3, 1 };
+        Random rand = new Random();
+        int len = rand.nextInt(100);
+        int[] testInput = new int[len];
+        for(int i = 0; i < len; i++) testInput[i] = rand.nextInt();
 
         // Increase the loop count to get better results once it works.
         // TestSuite.run(testInput, 10000);
