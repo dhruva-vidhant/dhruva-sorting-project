@@ -14,6 +14,6 @@ public class SelectionSort implements Sorter {
             input[i] = input[minIdx];
             input[minIdx] = temp;
         }
-        for(int i : input) System.out.println(i);
+        //for(int i : input) System.out.println(i);
     }
 }

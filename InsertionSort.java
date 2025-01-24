@@ -1,25 +1,21 @@
 public class InsertionSort implements Sorter {
 
     public void sort(int[] input) {
-        for(int i = 1; i < input.length-1; i++) {
-            int minVal = input[i];
-            int minIdx = i;
-            for(int j = i+1; j < input.length; j++) {
-                if(input[j] < minVal) {
-                    minVal = input[j];
-                    minIdx = j;
-                }
-            }
+        for(int i = 1; i < input.length; i++) {
             int j;
-            for(j = 0; i < i; j++) {
-                if(input[i] > minVal) break;
+            for(j = 0; j < i; j++) {
+                if(input[j] > input[i]) break;
             }
-            int temp = input[j];
-            input[j] = minVal;
-            for(int k = j; k < minIdx; k++) {
-                
+            int next = input[j];
+            input[j] = input[i];
+            for(int k = j+1; k <= i; k++) {
+                int temp = next;
+                next = input[k];
+                input[k] = temp;
             }
+            //for(int x : input) System.out.print(x);
+            System.out.println();
         }
-        for(int i : input) System.out.println(i);
+        //for(int i : input) System.out.println(i);
     }
 }
